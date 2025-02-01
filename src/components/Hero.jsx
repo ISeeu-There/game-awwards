@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
+import { BiLogoPlayStore } from "react-icons/bi";
 
 import Button from "./Button";
 import VideoPreview from "./VideoPreview";
@@ -16,7 +17,7 @@ const Hero = () => {
   const [loading, setLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 1;
   const nextVdRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -107,7 +108,7 @@ const Hero = () => {
               >
                 <video
                   ref={nextVdRef}
-                  src={getVideoSrc((currentIndex % totalVideos) + 1)}
+                  src={"./public/videos/hero-1"}
                   loop
                   muted
                   id="current-video"
@@ -140,23 +141,23 @@ const Hero = () => {
         </div>
 
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>A</b>MING
+          beat <b>M</b>e
         </h1>
 
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              redefi<b>n</b>e
+              can <b>y</b>ou
             </h1>
 
-            <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
+            <p className="mb-5 max-w-72 font-robert-regular font-bold text-2xl text-blue-100 text-center">
+              Welcome To the LEAGUE <br /> OF <span className="text-red-600">Unbeatable Players</span>
             </p>
 
             <Button
               id="watch-trailer"
-              title="Watch trailer"
-              leftIcon={<TiLocationArrow />}
+              title="DOWNLOADE"
+              leftIcon={<BiLogoPlayStore />}
               containerClass="bg-yellow-300 flex-center gap-1"
             />
           </div>
